@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/julian-theme.css'; // Import the specific theme file
 
 const tourDates = [
   { date: "MAR 12", city: "NEW YORK, NY", venue: "BLUE NOTE" },
@@ -12,19 +13,20 @@ const tourDates = [
 ---
 
 <BaseLayout title="Julian Lage Reference | Musician Portfolio">
-  <div class="font-serif bg-neutral-950 text-neutral-200 min-h-screen">
+  <!-- Apply the theme class wrapper -->
+  <div class="julian-theme min-h-screen selection:bg-black selection:text-white">
     
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 mix-blend-difference text-white">
-      <div class="text-lg tracking-widest uppercase font-bold">Julian Lage Ref</div>
-      <div class="hidden md:flex gap-8 text-sm tracking-widest uppercase font-sans opacity-80">
+    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 mix-blend-exclusion text-white">
+      <div class="julian-nav font-bold text-lg">Julian Lage Ref</div>
+      <div class="hidden md:flex gap-8 julian-nav opacity-80">
         <a href="#" class="hover:opacity-100 transition-opacity">Tour</a>
         <a href="#" class="hover:opacity-100 transition-opacity">Music</a>
         <a href="#" class="hover:opacity-100 transition-opacity">About</a>
         <a href="#" class="hover:opacity-100 transition-opacity">Store</a>
-        <a href="/" class="hover:opacity-100 transition-opacity border-b border-transparent hover:border-white">Back to Home</a>
+        <a href="/" class="hover:opacity-100 transition-opacity border-b border-transparent hover:border-current">Back to Home</a>
       </div>
-      <button class="md:hidden">MENU</button>
+      <button class="md:hidden julian-nav">MENU</button>
     </nav>
 
     <!-- Hero Section -->
@@ -33,53 +35,54 @@ const tourDates = [
         <img 
           src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop" 
           alt="Musician playing guitar in moody lighting" 
-          class="w-full h-full object-cover opacity-60 grayscale contrast-125"
+          class="w-full h-full object-cover grayscale contrast-125 brightness-75"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-90"></div>
+        <!-- Removed heavy gradient for a cleaner look, kept slight overlay for text -->
+        <div class="absolute inset-0 bg-black/20"></div>
       </div>
       
-      <div class="relative z-10 text-center space-y-6 px-4">
-        <h1 class="text-6xl md:text-8xl lg:text-9xl tracking-tight font-light text-white drop-shadow-xl">
+      <div class="relative z-10 text-center space-y-8 px-4">
+        <h1 class="julian-heading text-6xl md:text-8xl lg:text-9xl text-white drop-shadow-md">
           Speak to Me
         </h1>
-        <p class="text-lg md:text-xl font-sans tracking-[0.2em] uppercase text-neutral-300">
+        <p class="julian-nav text-neutral-200 text-lg md:text-xl">
           The New Album &middot; Out Now
         </p>
         <div class="pt-8">
-          <a href="#" class="inline-block border border-white/30 px-8 py-3 text-sm font-sans tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
+          <a href="#" class="inline-block border border-white/40 px-8 py-3 julian-nav text-white hover:bg-white hover:text-black transition-all duration-300">
             Listen / Buy
           </a>
         </div>
       </div>
     </header>
 
-    <!-- Tour Section -->
+    <!-- Tour Section (Light Mode bg comes from .julian-theme) -->
     <section class="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row gap-12">
         <div class="md:w-1/3">
-          <h2 class="text-4xl md:text-5xl italic font-light mb-6">Live</h2>
-          <p class="font-sans text-neutral-400 text-sm leading-relaxed max-w-xs">
+          <h2 class="julian-heading text-4xl md:text-5xl italic mb-6">Live</h2>
+          <p class="font-sans text-xs leading-relaxed max-w-xs text-[var(--color-julian-muted)]">
             Experience the new trio live across North America this spring. Featuring Dave King and Jorge Roeder.
           </p>
         </div>
         
         <div class="md:w-2/3 w-full">
-          <div class="border-t border-neutral-800">
+          <div class="border-t border-[var(--color-julian-muted)]/20">
             {tourDates.map((show) => (
-              <div class="group flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-neutral-800 hover:border-neutral-500 transition-colors cursor-pointer">
+              <div class="group flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-[var(--color-julian-muted)]/20 hover:border-black transition-colors cursor-pointer">
                 <div class="flex gap-6 items-baseline">
-                  <span class="font-sans text-xs font-bold tracking-widest w-16 text-neutral-500 group-hover:text-white transition-colors">{show.date}</span>
-                  <span class="text-xl md:text-2xl font-light group-hover:translate-x-2 transition-transform duration-300">{show.city}</span>
+                  <span class="julian-nav font-bold w-16 text-[var(--color-julian-muted)] group-hover:text-black transition-colors">{show.date}</span>
+                  <span class="text-xl md:text-2xl font-light julian-heading group-hover:translate-x-2 transition-transform duration-300">{show.city}</span>
                 </div>
                 <div class="flex justify-between items-center mt-2 md:mt-0 w-full md:w-auto md:gap-12 pl-22 md:pl-0">
-                  <span class="font-sans text-xs tracking-widest text-neutral-500 uppercase">{show.venue}</span>
-                  <span class="font-sans text-xs border border-neutral-800 px-4 py-1 rounded-full group-hover:border-neutral-400 transition-colors">TICKETS</span>
+                  <span class="julian-nav text-[var(--color-julian-muted)]">{show.venue}</span>
+                  <span class="julian-nav text-[10px] border border-[var(--color-julian-muted)]/30 px-4 py-1 rounded-full group-hover:border-black transition-colors">TICKETS</span>
                 </div>
               </div>
             ))}
           </div>
           <div class="mt-12 text-center md:text-left">
-            <a href="#" class="text-sm font-sans underline decoration-neutral-700 underline-offset-4 hover:decoration-white transition-all">
+            <a href="#" class="julian-nav underline decoration-gray-300 underline-offset-4 hover:decoration-black transition-all">
               VIEW ALL DATES
             </a>
           </div>
@@ -88,24 +91,24 @@ const tourDates = [
     </section>
 
     <!-- Featured Album / Quote -->
-    <section class="py-24 bg-neutral-900 text-center px-6">
+    <section class="py-24 bg-[#f4f4f4] text-center px-6">
       <div class="max-w-4xl mx-auto space-y-12">
-        <blockquote class="text-3xl md:text-5xl font-light leading-tight">
+        <blockquote class="julian-heading text-3xl md:text-5xl leading-tight">
           "Music that feels both intimately personal and wide open to the world."
         </blockquote>
-        <cite class="block font-sans text-xs tracking-widest text-neutral-500 not-italic uppercase">
+        <cite class="block julian-nav text-[var(--color-julian-muted)] not-italic">
           &mdash; The New York Times
         </cite>
         
         <div class="pt-12">
-          <div class="aspect-square max-w-md mx-auto bg-neutral-800 relative group overflow-hidden shadow-2xl">
+          <div class="aspect-square max-w-md mx-auto bg-white relative group overflow-hidden shadow-xl">
              <!-- Placeholder for Album Art -->
-             <div class="absolute inset-0 flex items-center justify-center text-neutral-600 font-sans tracking-widest border border-neutral-700">
+             <div class="absolute inset-0 flex items-center justify-center text-gray-300 julian-nav border border-gray-100">
                 ALBUM ARTWORK
              </div>
              <!-- Overlay -->
-             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span class="border border-white px-6 py-2 text-white font-sans text-xs tracking-widest uppercase">Stream Now</span>
+             <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="border border-black px-6 py-2 text-black julian-nav">Stream Now</span>
              </div>
           </div>
         </div>
@@ -113,7 +116,7 @@ const tourDates = [
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-neutral-900 text-center font-sans text-xs tracking-widest text-neutral-600 uppercase">
+    <footer class="py-12 border-t border-gray-200 text-center julian-nav text-gray-400">
       <p>&copy; 2024 Reference Artist. All Rights Reserved.</p>
     </footer>
 
