@@ -31,25 +31,25 @@ const tourDates = [
 
     <!-- Hero Section -->
     <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 z-0 bg-[#1a120b]"> <!-- Dark brown background base -->
         <img 
           src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop" 
           alt="Musician playing guitar in moody lighting" 
-          class="w-full h-full object-cover grayscale contrast-125 brightness-75"
+          class="w-full h-full object-cover sepia-[.8] brightness-[0.8] contrast-125 mix-blend-overlay opacity-80"
         />
-        <!-- Removed heavy gradient for a cleaner look, kept slight overlay for text -->
-        <div class="absolute inset-0 bg-black/20"></div>
+        <!-- Brown/Sepia Tint Overlay -->
+        <div class="absolute inset-0 bg-[#4a3b32]/40 mix-blend-multiply"></div>
       </div>
       
       <div class="relative z-10 text-center space-y-8 px-4">
-        <h1 class="julian-heading text-6xl md:text-8xl lg:text-9xl text-white drop-shadow-md">
+        <h1 class="julian-heading text-6xl md:text-8xl lg:text-9xl text-[#f2eadd] drop-shadow-xl">
           Speak to Me
         </h1>
-        <p class="julian-nav text-neutral-200 text-lg md:text-xl">
+        <p class="julian-nav text-[#dcd5cc] text-lg md:text-xl tracking-[0.2em]">
           The New Album &middot; Out Now
         </p>
         <div class="pt-8">
-          <a href="#" class="inline-block border border-white/40 px-8 py-3 julian-nav text-white hover:bg-white hover:text-black transition-all duration-300">
+          <a href="#" class="inline-block border border-[#dcd5cc]/50 px-8 py-3 julian-nav text-[#f2eadd] hover:bg-[#f2eadd] hover:text-[#1a120b] transition-all duration-300">
             Listen / Buy
           </a>
         </div>
