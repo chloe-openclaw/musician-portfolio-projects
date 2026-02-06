@@ -31,25 +31,27 @@ const tourDates = [
 
     <!-- Hero Section -->
     <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <div class="absolute inset-0 z-0 bg-[#1a120b]"> <!-- Dark brown background base -->
+      <div class="absolute inset-0 z-0 bg-[#8b5e3c]"> <!-- Lighter, warmer brown base -->
         <img 
           src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop" 
           alt="Musician playing guitar in moody lighting" 
-          class="w-full h-full object-cover sepia-[.8] brightness-[0.8] contrast-125 mix-blend-overlay opacity-80"
+          class="w-full h-full object-cover sepia-[.6] contrast-[1.1] mix-blend-luminosity opacity-90"
         />
-        <!-- Brown/Sepia Tint Overlay -->
-        <div class="absolute inset-0 bg-[#4a3b32]/40 mix-blend-multiply"></div>
+        <!-- Warm Amber/Brown Tint Overlay (Soft Light preserves brightness) -->
+        <div class="absolute inset-0 bg-[#6d4c41]/40 mix-blend-hard-light"></div>
+        <!-- Subtle gradient at bottom for text readability without crushing the whole image -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3e2723]/80 via-transparent to-transparent"></div>
       </div>
       
       <div class="relative z-10 text-center space-y-8 px-4">
-        <h1 class="julian-heading text-6xl md:text-8xl lg:text-9xl text-[#f2eadd] drop-shadow-xl">
+        <h1 class="julian-heading text-6xl md:text-8xl lg:text-9xl text-[#fdfbf7] drop-shadow-xl shadow-black/20">
           Speak to Me
         </h1>
-        <p class="julian-nav text-[#dcd5cc] text-lg md:text-xl tracking-[0.2em]">
+        <p class="julian-nav text-[#ede0d4] text-lg md:text-xl tracking-[0.2em] drop-shadow-md">
           The New Album &middot; Out Now
         </p>
         <div class="pt-8">
-          <a href="#" class="inline-block border border-[#dcd5cc]/50 px-8 py-3 julian-nav text-[#f2eadd] hover:bg-[#f2eadd] hover:text-[#1a120b] transition-all duration-300">
+          <a href="#" class="inline-block border border-[#ede0d4]/60 px-8 py-3 julian-nav text-[#fdfbf7] hover:bg-[#fdfbf7] hover:text-[#3e2723] transition-all duration-300 shadow-lg shadow-black/10">
             Listen / Buy
           </a>
         </div>
