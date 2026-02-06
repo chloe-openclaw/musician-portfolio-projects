@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter';
+  --font-serif: 'Source Serif 4';
+}
+
+/* ── Base resets ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-serif);
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-100);
+}

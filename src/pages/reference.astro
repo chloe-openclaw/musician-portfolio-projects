@@ -1,0 +1,289 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Tool & Style Reference">
+  <div class="max-w-3xl mx-auto py-20 px-6 space-y-24">
+
+    <!-- ════════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════════ -->
+    <header class="text-center space-y-4">
+      <p class="text-sm uppercase tracking-[0.25em] text-[var(--color-accent-300)] font-medium">Musician Portfolio</p>
+      <h1 class="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-r from-[var(--color-accent-300)] via-[var(--color-warm-400)] to-[var(--color-accent-400)] bg-clip-text text-transparent">
+        Tool &amp; Style Reference
+      </h1>
+      <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
+        A living catalogue of every visual element in this theme&mdash;typography, tags, embeds, and media components.
+      </p>
+    </header>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 1: TYPOGRAPHY
+         ════════════════════════════════════════════ -->
+    <section class="space-y-8">
+      <div class="space-y-2">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">Aa</span>
+          <h2 class="text-3xl font-serif font-bold">Typography</h2>
+        </div>
+        <p class="text-[var(--color-text-secondary)]">
+          Headings set in <strong class="text-[var(--color-text-primary)]">Inter</strong> (sans-serif). Body text set in <strong class="text-[var(--color-text-primary)]">Source Serif 4</strong>.
+        </p>
+      </div>
+
+      <!-- Headings H1–H6 -->
+      <div class="rounded-xl border border-[var(--color-surface-600)] bg-[var(--color-surface-800)] divide-y divide-[var(--color-surface-600)]">
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h1</span>
+          <h1 class="text-5xl md:text-6xl font-sans font-semibold leading-tight">The Quiet Hours</h1>
+        </div>
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h2</span>
+          <h2 class="text-4xl font-sans font-semibold leading-tight">Midnight Sessions</h2>
+        </div>
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h3</span>
+          <h3 class="text-3xl font-sans font-semibold leading-snug">Studio Notes</h3>
+        </div>
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h4</span>
+          <h4 class="text-2xl font-sans font-semibold">Verse &amp; Chorus</h4>
+        </div>
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h5</span>
+          <h5 class="text-xl font-sans font-semibold">Production Credits</h5>
+        </div>
+        <div class="p-6 space-y-1">
+          <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">h6</span>
+          <h6 class="text-lg font-sans font-semibold">Liner Notes</h6>
+        </div>
+      </div>
+
+      <!-- Body text sample (serif) -->
+      <div class="rounded-xl border border-[var(--color-surface-600)] bg-[var(--color-surface-800)] p-6 space-y-4">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Body text &amp; inline styles</span>
+        <p class="font-serif text-base leading-relaxed">
+          This is standard body text set in <strong>Source Serif 4</strong> at the default size. It's optimized for readability on dark backgrounds with generous line-height.
+          Here's some <strong class="text-[var(--color-text-primary)]">bold text</strong>, some <em>italic text</em>,
+          and an <a href="#" class="text-[var(--color-accent-300)] underline decoration-[var(--color-accent-500)]/40 hover:decoration-[var(--color-accent-300)] transition-colors">inline link</a>. You can also use
+          <code class="px-2 py-0.5 rounded bg-[var(--color-surface-600)] text-[var(--color-accent-200)] text-sm font-mono">inline code</code>
+          for technical references.
+        </p>
+        <blockquote class="border-l-4 border-[var(--color-accent-500)] pl-5 italic text-[var(--color-text-secondary)] font-serif">
+          &ldquo;Music is the space between the notes.&rdquo; &mdash; Claude Debussy
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 2: TAGS (PILLS)
+         ════════════════════════════════════════════ -->
+    <section class="space-y-8">
+      <div class="space-y-2">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">&#9898;</span>
+          <h2 class="text-3xl font-serif font-bold">Tags &mdash; Pills</h2>
+        </div>
+        <p class="text-[var(--color-text-secondary)]">
+          Reusable pill components for genres, moods, and categorization. Multiple style variants.
+        </p>
+      </div>
+
+      <!-- Default (neutral) tags -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Default</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-surface-600)] text-[var(--color-text-secondary)] border border-[var(--color-surface-500)]">R&amp;B</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-surface-600)] text-[var(--color-text-secondary)] border border-[var(--color-surface-500)]">Neo-Soul</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-surface-600)] text-[var(--color-text-secondary)] border border-[var(--color-surface-500)]">Alternative</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-surface-600)] text-[var(--color-text-secondary)] border border-[var(--color-surface-500)]">Indie</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-surface-600)] text-[var(--color-text-secondary)] border border-[var(--color-surface-500)]">Lo-Fi</span>
+        </div>
+      </div>
+
+      <!-- Accent (purple) tags -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Accent</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-accent-500)]/20 text-[var(--color-accent-200)] border border-[var(--color-accent-500)]/40">Vocals</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-accent-500)]/20 text-[var(--color-accent-200)] border border-[var(--color-accent-500)]/40">Guitar</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-accent-500)]/20 text-[var(--color-accent-200)] border border-[var(--color-accent-500)]/40">Keys</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-accent-500)]/20 text-[var(--color-accent-200)] border border-[var(--color-accent-500)]/40">Production</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-accent-500)]/20 text-[var(--color-accent-200)] border border-[var(--color-accent-500)]/40">Mixing</span>
+        </div>
+      </div>
+
+      <!-- Warm tags -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Warm</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-warm-500)]/15 text-[var(--color-warm-400)] border border-[var(--color-warm-500)]/30">Chill</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-warm-500)]/15 text-[var(--color-warm-400)] border border-[var(--color-warm-500)]/30">Late Night</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-warm-500)]/15 text-[var(--color-warm-400)] border border-[var(--color-warm-500)]/30">Dreamy</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-warm-500)]/15 text-[var(--color-warm-400)] border border-[var(--color-warm-500)]/30">Intimate</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--color-warm-500)]/15 text-[var(--color-warm-400)] border border-[var(--color-warm-500)]/30">Analog</span>
+        </div>
+      </div>
+
+      <!-- Solid tags -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Solid</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-[var(--color-accent-500)] text-white">Featured</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-[var(--color-warm-500)] text-[var(--color-surface-900)]">New Release</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-[var(--color-text-primary)] text-[var(--color-surface-900)]">Sold Out</span>
+          <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-gradient-to-r from-[var(--color-accent-500)] to-[var(--color-warm-500)] text-white">Limited Edition</span>
+        </div>
+      </div>
+
+      <!-- Small / compact tags -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Small / Compact</span>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">2026</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">Single</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">EP</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">LP</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">Demo</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">Remix</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">Acoustic</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--color-surface-600)] text-[var(--color-text-muted)]">Live</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 3: MEDIA
+         ════════════════════════════════════════════ -->
+    <section class="space-y-8">
+      <div class="space-y-2">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">&#9654;</span>
+          <h2 class="text-3xl font-serif font-bold">Media</h2>
+        </div>
+        <p class="text-[var(--color-text-secondary)]">
+          Embeddable media components&mdash;video, audio, and artwork.
+        </p>
+      </div>
+
+      <!-- YouTube Embed Placeholder -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">YouTube Embed</span>
+        <p class="text-sm text-[var(--color-text-secondary)]">
+          Responsive 16:9 iframe. Swap the <code class="px-2 py-0.5 rounded bg-[var(--color-surface-600)] text-[var(--color-accent-200)] text-sm font-mono">src</code> for any YouTube URL.
+        </p>
+        <div class="rounded-xl overflow-hidden border border-[var(--color-surface-600)] shadow-2xl shadow-[var(--color-accent-500)]/10">
+          <div class="relative w-full" style="padding-bottom: 56.25%;">
+            <div class="absolute inset-0 bg-[var(--color-surface-800)] flex flex-col items-center justify-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-[var(--color-accent-500)]/20 border border-[var(--color-accent-500)]/40 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5 text-[var(--color-accent-300)]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="text-sm text-[var(--color-text-muted)] font-mono">youtube iframe placeholder</span>
+            </div>
+            <!-- Uncomment to embed a real video:
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Video Title"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Audio Player -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Custom Audio Player</span>
+        <div class="rounded-xl border border-[var(--color-surface-600)] bg-[var(--color-surface-800)] p-6 space-y-4 shadow-lg">
+          <div class="flex items-center gap-5">
+            <!-- Album art (inline) -->
+            <div class="w-20 h-20 rounded-lg bg-gradient-to-br from-[var(--color-accent-500)] to-[var(--color-warm-500)] flex items-center justify-center text-3xl text-white shadow-md shrink-0">
+              &#9835;
+            </div>
+            <div class="space-y-1 min-w-0">
+              <p class="text-lg font-semibold truncate">Late Night Interlude</p>
+              <p class="text-sm text-[var(--color-text-muted)]">Unreleased Demo &mdash; 2026</p>
+            </div>
+          </div>
+
+          <!-- Progress bar (visual) -->
+          <div class="space-y-2">
+            <div class="h-1.5 rounded-full bg-[var(--color-surface-600)] overflow-hidden">
+              <div class="h-full w-2/5 rounded-full bg-gradient-to-r from-[var(--color-accent-400)] to-[var(--color-warm-400)]"></div>
+            </div>
+            <div class="flex justify-between text-xs text-[var(--color-text-muted)] font-mono">
+              <span>1:24</span>
+              <span>3:47</span>
+            </div>
+          </div>
+
+          <!-- Playback controls (visual) -->
+          <div class="flex items-center justify-center gap-8 text-[var(--color-text-secondary)]">
+            <button class="hover:text-[var(--color-accent-300)] transition-colors cursor-pointer" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+            </button>
+            <button class="w-14 h-14 rounded-full bg-[var(--color-accent-500)] hover:bg-[var(--color-accent-400)] text-white flex items-center justify-center transition-colors shadow-lg shadow-[var(--color-accent-500)]/30 cursor-pointer" aria-label="Play">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <button class="hover:text-[var(--color-accent-300)] transition-colors cursor-pointer" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm10 0h2V6h-2v12z"/></svg>
+            </button>
+          </div>
+
+          <!-- Native HTML5 fallback -->
+          <div class="pt-2 border-t border-[var(--color-surface-600)]">
+            <p class="text-xs text-[var(--color-text-muted)] mb-2">Native HTML5 player (no source loaded):</p>
+            <audio controls class="w-full rounded-lg [&::-webkit-media-controls-panel]:bg-[var(--color-surface-700)]">
+              <source src="" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Album Art Placeholder -->
+      <div class="space-y-3">
+        <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Album Art</span>
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Large art -->
+          <div class="col-span-2 sm:col-span-1 aspect-square rounded-xl overflow-hidden border border-[var(--color-surface-600)] shadow-2xl shadow-[var(--color-accent-500)]/10">
+            <div class="w-full h-full bg-gradient-to-br from-[var(--color-accent-500)]/30 via-[var(--color-surface-800)] to-[var(--color-warm-500)]/20 flex flex-col items-center justify-center gap-3">
+              <div class="w-20 h-20 rounded-full bg-[var(--color-accent-500)]/15 border border-[var(--color-accent-500)]/30 flex items-center justify-center">
+                <span class="text-4xl text-[var(--color-accent-300)]">&#9835;</span>
+              </div>
+              <span class="text-xs text-[var(--color-text-muted)] font-mono">500 &times; 500</span>
+            </div>
+          </div>
+          <!-- Small art variants -->
+          <div class="col-span-2 sm:col-span-1 grid grid-cols-2 gap-4">
+            <div class="aspect-square rounded-lg overflow-hidden border border-[var(--color-surface-600)]">
+              <div class="w-full h-full bg-gradient-to-br from-[var(--color-accent-600)] to-[var(--color-accent-400)] flex items-center justify-center">
+                <span class="text-2xl text-white/80">&#9835;</span>
+              </div>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-[var(--color-surface-600)]">
+              <div class="w-full h-full bg-gradient-to-br from-[var(--color-warm-600)] to-[var(--color-warm-400)] flex items-center justify-center">
+                <span class="text-2xl text-white/80">&#9835;</span>
+              </div>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-[var(--color-surface-600)]">
+              <div class="w-full h-full bg-gradient-to-br from-[var(--color-surface-700)] to-[var(--color-surface-500)] flex items-center justify-center">
+                <span class="text-2xl text-[var(--color-text-muted)]">&#9835;</span>
+              </div>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-[var(--color-surface-600)]">
+              <div class="w-full h-full bg-gradient-to-br from-[var(--color-accent-500)] via-[var(--color-warm-500)] to-[var(--color-accent-400)] flex items-center justify-center">
+                <span class="text-2xl text-white/80">&#9835;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
