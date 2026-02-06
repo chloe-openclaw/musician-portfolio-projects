@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/joshtronic-theme.css';
+
+const posts = [
+  { title: "You could just learn to code", date: "2026-02-01", url: "#" },
+  { title: "I'm not Joshing you", date: "2026-01-25", url: "#" },
+  { title: "The Overly Confident Paste", date: "2026-01-18", url: "#" },
+  { title: "Cleaned Out My Closet", date: "2026-01-11", url: "#" },
+  { title: "Hello, 2026", date: "2026-01-04", url: "#" },
+];
+---
+
+<BaseLayout title="Joshtronic Reference">
+  <!-- Theme Wrapper -->
+  <div class="joshtronic-theme min-h-screen">
+    
+    <div class="joshtronic-container">
+      <!-- Header / Intro -->
+      <section class="mb-12">
+        <h1 class="text-4xl font-bold mb-6 text-[var(--color-josh-text)]">Hi, I'm Josh</h1>
+        <div class="space-y-4 text-lg">
+          <p>
+            I make <a href="#">things</a>.
+          </p>
+          <p>
+            <a href="#">Code</a> is a medium that found me at an impressionable young age. I've been fortunate to make a career out of it, even if I say things like, "<a href="#">I'm not sure what I want to do when I grow up</a>".
+          </p>
+          <p>
+            To avoid staring at a computer screen all day, I channel a lot of my creative energy into making <a href="#">noise</a>. When not battling a <a href="#">fret board</a>, I engage in a fair amount of <a href="#">culinary debauchery</a>, mostly of the breakfast and fermentation variety.
+          </p>
+          <p>
+            This site is a <a href="#">collection of my musings</a> over the years, for which I've posted weekly for well over a decade. Doing my part to combat the dead Internet, I still <a href="#">hand write</a> all of my content.
+          </p>
+        </div>
+      </section>
+
+      <!-- Recent Posts List -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Recent Diatribes</h2>
+        <ul class="space-y-2 list-disc pl-5 marker:text-gray-400">
+          {posts.map((post) => (
+            <li>
+              <a href={post.url} class="font-medium text-[var(--color-josh-link)] hover:underline">{post.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-20 pt-8 border-t border-gray-200 text-sm text-[var(--color-josh-meta)]">
+        <p>&copy; 2026 Joshtronic Reference. <a href="/">Back to Portfolio</a></p>
+      </footer>
+    </div>
+
+  </div>
+</BaseLayout>
