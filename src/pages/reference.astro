@@ -172,13 +172,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <span class="text-xs font-mono text-[var(--color-text-muted)] uppercase tracking-wider">Currently Playing (Spotify Style)</span>
         <div class="rounded-xl border border-[var(--color-surface-600)] bg-[#191414] p-4 flex items-center gap-4 shadow-xl max-w-md">
            <!-- Album Art Placeholder -->
-           <div class="w-16 h-16 rounded shadow-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shrink-0">
-              <span class="text-2xl text-white">🎵</span>
+           <div class="w-16 h-16 rounded shadow-lg overflow-hidden shrink-0">
+              <img src="https://i.scdn.co/image/ab6761610000e5ebc98233f07297e20696979261" alt="Album Art" class="w-full h-full object-cover">
            </div>
            
            <div class="flex-1 min-w-0">
-              <p class="text-sm font-bold text-white truncate">Late Night Vibe</p>
-              <p class="text-xs text-neutral-400 truncate">Indie R&B Collective</p>
+              <p class="text-sm font-bold text-white truncate">Best Friend</p>
+              <p class="text-xs text-neutral-400 truncate">Rex Orange County</p>
               
               <!-- Progress Bar -->
               <div class="mt-2 h-1 rounded-full bg-neutral-700 overflow-hidden">
@@ -226,8 +226,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="relative w-full" style="padding-bottom: 56.25%;">
             <iframe
               class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/5qap5aO4i9A" 
-              title="Lofi Girl - lofi hip hop radio"
+              src="https://www.youtube.com/embed/CIMEvGV9iZM" 
+              title="Rex Orange County - Best Friend"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
