@@ -15,11 +15,20 @@ const posts = [
   <!-- Theme Wrapper -->
   <div class="joshtronic-theme min-h-screen">
     
-    <div class="joshtronic-container">
+    <!-- Navbar (Simulated) -->
+    <nav class="max-w-[720px] mx-auto px-6 py-8 flex gap-6 text-sm opacity-70 font-mono">
+      <span class="text-[#f6c177]">joshtronic</span>
+      <a href="#" class="no-underline hover:text-white">words</a>
+      <a href="#" class="no-underline hover:text-white">sounds</a>
+      <a href="#" class="no-underline hover:text-white">ventures</a>
+      <a href="#" class="no-underline hover:text-white">code</a>
+    </nav>
+
+    <div class="joshtronic-container pt-4">
       <!-- Header / Intro -->
       <section class="mb-12">
-        <h1 class="text-4xl font-bold mb-6 text-[var(--color-josh-text)]">Hi, I'm Josh</h1>
-        <div class="space-y-4 text-lg">
+        <h1 class="text-3xl md:text-4xl mb-6">Hi, I'm Josh</h1>
+        <div class="space-y-6 text-lg">
           <p>
             I make <a href="#">things</a>.
           </p>
@@ -30,26 +39,26 @@ const posts = [
             To avoid staring at a computer screen all day, I channel a lot of my creative energy into making <a href="#">noise</a>. When not battling a <a href="#">fret board</a>, I engage in a fair amount of <a href="#">culinary debauchery</a>, mostly of the breakfast and fermentation variety.
           </p>
           <p>
-            This site is a <a href="#">collection of my musings</a> over the years, for which I've posted weekly for well over a decade. Doing my part to combat the dead Internet, I still <a href="#">hand write</a> all of my content.
+            This site is a <a href="#">collection of my musings</a> over the years, for which I've posted weekly for well over a decade. Doing my part to combat the dead Internet, I still <a href="#">hand write</a> all of my content. Most posts are technical in nature, but lately I've been focusing more on prose and less on code.
           </p>
         </div>
       </section>
 
       <!-- Recent Posts List -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Recent Diatribes</h2>
-        <ul class="space-y-2 list-disc pl-5 marker:text-gray-400">
+        <h2 class="text-2xl mb-6">Recent Diatribes</h2>
+        <ul class="space-y-1">
           {posts.map((post) => (
             <li>
-              <a href={post.url} class="font-medium text-[var(--color-josh-link)] hover:underline">{post.title}</a>
+              <a href={post.url} class="border-b border-white/20 hover:border-[#9ccfd8] pb-0.5">{post.title}</a>
             </li>
           ))}
         </ul>
       </section>
 
       <!-- Footer -->
-      <footer class="mt-20 pt-8 border-t border-gray-200 text-sm text-[var(--color-josh-meta)]">
-        <p>&copy; 2026 Joshtronic Reference. <a href="/">Back to Portfolio</a></p>
+      <footer class="mt-24 pt-8 border-t border-white/10 text-xs text-white/40 font-mono text-center">
+        <p>&copy; 2026 Joshtronic Reference. <a href="/" class="no-underline hover:text-white">Back to Portfolio</a></p>
       </footer>
     </div>
 
