@@ -1,86 +1,109 @@
 /* Joshtronic Theme Reference 
-   Vibe: Dark Mode IDE, Developer-Centric, Terminal Minimalism
-   Based on user screenshot & analysis.
+   Vibe: Developer-Centric Brutalist Minimalism
+   Based on specific user design prompt (Gemini Analysis).
 */
 
 :root {
-  /* Colors - Dark Mode IDE Style */
-  --color-josh-bg: #232136;       /* Deep warm purple/charcoal (Rose Pine / Dracula vibes) */
-  --color-josh-card-bg: #2a273f;  /* Slightly lighter for container if needed, or same as bg */
-  --color-josh-text: #e0def4;     /* Soft off-white */
-  --color-josh-heading: #ea9a97;  /* Soft Salmon/Goldenrod/Orange accent */
-  --color-josh-link: #e0def4;     /* Links match text but underlined */
-  --color-josh-link-hover: #9ccfd8; /* Cyan/Teal hover */
+  /* Colors - "Syntax Highlighting Aesthetic" */
+  --color-josh-bg: #1e1e2e;       /* Deep matte dark-mode (Deep Purple) */
+  --color-josh-text: #cdd6f4;     /* Off-white/Light gray for readability */
+  --color-josh-heading: #fab387;  /* Warm "syntax color" (Goldenrod/Soft Orange) */
+  --color-josh-link: #89b4fa;     /* Classic Sky Blue for interactivity */
   
   /* Typography */
-  --font-josh-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+  --font-josh-mono: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
 }
 
 /* Utility Classes */
 .joshtronic-theme {
   background-color: var(--color-josh-bg);
   color: var(--color-josh-text);
-  font-family: var(--font-josh-mono);
-  line-height: 1.7;
+  font-family: var(--font-josh-mono); /* Strictly Monospace everywhere */
+  line-height: 1.8; /* Generous line-height */
   -webkit-font-smoothing: antialiased;
 }
 
 .joshtronic-container {
-  max-width: 720px;
+  max-width: 720px; /* Single-Column Focus */
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
 
-/* Links: Text-decoration style */
+/* Zero-Decor Policy */
+.joshtronic-theme * {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Links: "Web-native" aesthetic */
 .joshtronic-theme a {
   color: var(--color-josh-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 4px; /* Distinctive gap */
-  text-decoration-color: rgba(224, 222, 244, 0.4);
-  transition: all 0.2s ease;
+  text-underline-offset: 3px;
 }
 
 .joshtronic-theme a:hover {
-  text-decoration-color: var(--color-josh-link-hover);
-  color: var(--color-josh-link-hover);
+  filter: brightness(1.2);
 }
 
-/* Headings: IDE Keyword Color */
-.joshtronic-theme h1,
-.joshtronic-theme h2,
-.joshtronic-theme h3 {
-  font-family: var(--font-josh-mono);
+/* Visual Hierarchy */
+.joshtronic-theme h1 {
+  font-size: 2.5rem; /* Very large */
   font-weight: 700;
   color: var(--color-josh-heading);
-  margin-top: 2em;
-  margin-bottom: 0.8em;
-  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Code blocks look like comments or snippets */
-.joshtronic-theme code {
-  background-color: rgba(0,0,0,0.2);
-  padding: 0.1em 0.3em;
-  border-radius: 4px;
-  color: #c4a7e7; /* Purple keyword color */
+.joshtronic-theme h2 {
+  font-size: 1.5rem; /* Medium-sized */
+  font-weight: 700;
+  color: var(--color-josh-heading);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
-/* List Markers */
+/* Lists: ASCII style */
 .joshtronic-theme ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 1rem;
 }
 
 .joshtronic-theme li {
   position: relative;
-  padding-left: 1.5em;
-  margin-bottom: 0.5em;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .joshtronic-theme li::before {
-  content: "-";
+  content: "-"; /* ASCII bullet */
   position: absolute;
-  left: 0;
-  color: rgba(224, 222, 244, 0.5);
+  left: -0.5rem;
+  color: var(--color-josh-text);
+  opacity: 0.7;
+}
+
+/* Navigation: Casual "hacker-style" */
+.joshtronic-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding-bottom: 3rem;
+}
+
+.joshtronic-nav a {
+  text-decoration: none;
+  color: var(--color-josh-text);
+}
+
+.joshtronic-nav a:hover {
+  text-decoration: underline;
+  color: var(--color-josh-heading);
+}
+
+.joshtronic-nav .brand {
+  color: #a6e3a1; /* Subtle green for the "logo" text */
+  font-weight: bold;
 }

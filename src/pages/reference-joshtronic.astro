@@ -15,20 +15,22 @@ const posts = [
   <!-- Theme Wrapper -->
   <div class="joshtronic-theme min-h-screen">
     
-    <!-- Navbar (Simulated) -->
-    <nav class="max-w-[720px] mx-auto px-6 py-8 flex gap-6 text-sm opacity-70 font-mono">
-      <span class="text-[#f6c177]">joshtronic</span>
-      <a href="#" class="no-underline hover:text-white">words</a>
-      <a href="#" class="no-underline hover:text-white">sounds</a>
-      <a href="#" class="no-underline hover:text-white">ventures</a>
-      <a href="#" class="no-underline hover:text-white">code</a>
-    </nav>
+    <div class="joshtronic-container">
+      
+      <!-- Navigation Bar (Simple, horizontal, lowercase) -->
+      <nav class="joshtronic-nav">
+        <span class="brand">👾</span> <!-- Tiny minimalist icon -->
+        <span class="brand">joshtronic</span>
+        <a href="#">words</a>
+        <a href="#">sounds</a>
+        <a href="#">ventures</a>
+        <a href="#">code</a>
+      </nav>
 
-    <div class="joshtronic-container pt-4">
-      <!-- Header / Intro -->
-      <section class="mb-12">
-        <h1 class="text-3xl md:text-4xl mb-6">Hi, I'm Josh</h1>
-        <div class="space-y-6 text-lg">
+      <!-- Header / Intro (Very large H1) -->
+      <section class="mb-16">
+        <h1>Hi, I'm Josh</h1>
+        <div class="space-y-6">
           <p>
             I make <a href="#">things</a>.
           </p>
@@ -39,26 +41,28 @@ const posts = [
             To avoid staring at a computer screen all day, I channel a lot of my creative energy into making <a href="#">noise</a>. When not battling a <a href="#">fret board</a>, I engage in a fair amount of <a href="#">culinary debauchery</a>, mostly of the breakfast and fermentation variety.
           </p>
           <p>
-            This site is a <a href="#">collection of my musings</a> over the years, for which I've posted weekly for well over a decade. Doing my part to combat the dead Internet, I still <a href="#">hand write</a> all of my content. Most posts are technical in nature, but lately I've been focusing more on prose and less on code.
+            This site is a <a href="#">collection of my musings</a> over the years, for which I've posted weekly for well over a decade. Doing my part to combat the dead Internet, I still <a href="#">hand write</a> all of my content.
           </p>
         </div>
       </section>
 
-      <!-- Recent Posts List -->
+      <!-- Recent Posts List (Medium sized H2, ASCII bullets) -->
       <section>
-        <h2 class="text-2xl mb-6">Recent Diatribes</h2>
-        <ul class="space-y-1">
+        <h2>Recent Diatribes</h2>
+        <ul>
           {posts.map((post) => (
             <li>
-              <a href={post.url} class="border-b border-white/20 hover:border-[#9ccfd8] pb-0.5">{post.title}</a>
+              <a href={post.url}>{post.title}</a>
             </li>
           ))}
         </ul>
       </section>
 
-      <!-- Footer -->
-      <footer class="mt-24 pt-8 border-t border-white/10 text-xs text-white/40 font-mono text-center">
-        <p>&copy; 2026 Joshtronic Reference. <a href="/" class="no-underline hover:text-white">Back to Portfolio</a></p>
+      <!-- Footer (Small print, badges) -->
+      <footer class="mt-32 pt-8 text-xs text-center opacity-50 space-y-2">
+        <p>Built by Humans</p>
+        <p>&copy; 2026 Joshtronic Reference</p>
+        <p><a href="/" style="text-decoration: none; border-bottom: 1px dotted;">[ Return to Main Portfolio ]</a></p>
       </footer>
     </div>
 
