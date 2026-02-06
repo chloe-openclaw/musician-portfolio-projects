@@ -271,77 +271,72 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <!-- Julian Lage Card -->
-      <div class="rounded-xl border border-[var(--color-surface-600)] bg-[var(--color-surface-800)] p-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
-        <div class="flex-1 space-y-4">
-          <h3 class="text-2xl font-serif font-bold text-[var(--color-text-primary)]">
-            The "Julian" Aesthetic
-          </h3>
-          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-            A minimalist, organic vibe inspired by <a href="https://www.julianlage.com/" target="_blank" class="underline decoration-[var(--color-accent-500)]/40 hover:text-white transition-colors">Julian Lage's website</a>.
-          </p>
-          
-          <div class="grid grid-cols-2 gap-4 text-xs font-mono text-[var(--color-text-muted)]">
-            <div class="space-y-1">
-              <strong class="block text-[var(--color-text-primary)] uppercase tracking-wider">Palette</strong>
+      <!-- Julian Lage Card (Styled) -->
+      <div class="rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01] duration-300" style="background-color: #f2efe9; color: #2c2420; font-family: 'Times New Roman', Times, serif;">
+        <div class="p-8 flex flex-col md:flex-row gap-8 items-start md:items-center">
+          <div class="flex-1 space-y-4">
+            <h3 class="text-3xl font-normal tracking-tight" style="color: #2c2420;">
+              The "Julian" Aesthetic
+            </h3>
+            <p class="text-sm font-sans uppercase tracking-widest leading-relaxed opacity-80" style="color: #786e66;">
+              Minimalist &middot; Organic &middot; Warm
+            </p>
+            <p class="text-lg leading-relaxed font-light italic">
+              "A design that feels both intimately personal and wide open to the world."
+            </p>
+            
+            <div class="pt-4 grid grid-cols-2 gap-4 text-xs font-sans tracking-widest uppercase opacity-60">
               <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-[#f2efe9] border border-white/20"></span>
-                <span>Warm Linen (#f2efe9)</span>
+                <span class="w-3 h-3 rounded-full border border-black/10" style="background-color: #f2efe9;"></span>
+                <span>Linen (#f2efe9)</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-[#2c2420] border border-white/20"></span>
+                <span class="w-3 h-3 rounded-full border border-black/10" style="background-color: #2c2420;"></span>
                 <span>Charcoal (#2c2420)</span>
               </div>
             </div>
-            <div class="space-y-1">
-              <strong class="block text-[var(--color-text-primary)] uppercase tracking-wider">Typography</strong>
-              <span>Serif: Times / Caslon</span>
-              <span class="block">Sans: System / Inter</span>
-            </div>
           </div>
-        </div>
 
-        <div class="flex-shrink-0">
-           <a href="/reference-julian" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#8b5e3c] hover:bg-[#6d4c41] text-[#f2efe9] font-serif italic text-lg transition-colors shadow-lg">
-             View Julian Style &rarr;
-           </a>
+          <div class="flex-shrink-0">
+             <a href="/reference-julian" class="inline-block px-8 py-3 border border-[#2c2420]/20 font-sans text-xs tracking-[0.2em] uppercase hover:bg-[#2c2420] hover:text-[#f2efe9] transition-colors duration-300">
+               View Style
+             </a>
+          </div>
         </div>
       </div>
 
-      <!-- Joshtronic Card -->
-      <div class="rounded-xl border border-[var(--color-surface-600)] bg-[var(--color-surface-800)] p-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
-        <div class="flex-1 space-y-4">
-          <h3 class="text-2xl font-serif font-bold text-[var(--color-text-primary)]">
-            The "Joshtronic" Aesthetic
-          </h3>
-          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-            A developer-centric dark mode theme inspired by <a href="https://joshtronic.com/" target="_blank" class="underline decoration-[var(--color-accent-500)]/40 hover:text-white transition-colors">Joshtronic</a>. Features monospaced typography and IDE-like colors.
-          </p>
-          
-          <div class="grid grid-cols-2 gap-4 text-xs font-mono text-[var(--color-text-muted)]">
-            <div class="space-y-1">
-              <strong class="block text-[var(--color-text-primary)] uppercase tracking-wider">Palette</strong>
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-[#232136] border border-white/20"></span>
-                <span>Deep Purple (#232136)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-[#ea9a97] border border-white/20"></span>
-                <span>Goldenrod (#ea9a97)</span>
-              </div>
+      <!-- Joshtronic Card (Styled) -->
+      <div class="rounded-none overflow-hidden" style="background-color: #1e1e2e; color: #cdd6f4; font-family: 'Fira Code', 'JetBrains Mono', monospace; border: 1px solid #313244;">
+        <div class="p-8 flex flex-col md:flex-row gap-8 items-start md:items-center">
+          <div class="flex-1 space-y-4">
+            <h3 class="text-2xl font-bold" style="color: #fab387;">
+              The "Joshtronic" Aesthetic
+            </h3>
+            <p class="text-sm opacity-70 leading-relaxed">
+              // Brutalist &middot; Developer-Centric &middot; Terminal
+            </p>
+            <div class="text-sm space-y-2 opacity-90">
+              <p>> System.init("dark_mode");</p>
+              <p>> User.preference = "no_distractions";</p>
             </div>
-            <div class="space-y-1">
-              <strong class="block text-[var(--color-text-primary)] uppercase tracking-wider">Typography</strong>
-              <span>Mono: JetBrains / Fira</span>
-              <span class="block">Link: Underlined White</span>
+            
+            <div class="pt-4 grid grid-cols-2 gap-4 text-xs opacity-60">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 border border-white/20" style="background-color: #1e1e2e;"></span>
+                <span>Purple (#1e1e2e)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 border border-white/20" style="background-color: #fab387;"></span>
+                <span>Gold (#fab387)</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex-shrink-0">
-           <a href="/reference-joshtronic" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#232136] hover:bg-[#2a273f] text-[#ea9a97] font-mono border border-[#ea9a97]/30 transition-colors shadow-lg">
-             View Joshtronic Style &rarr;
-           </a>
+          <div class="flex-shrink-0">
+             <a href="/reference-joshtronic" class="inline-block" style="color: #89b4fa; text-decoration: underline; text-underline-offset: 4px;">
+               [ View_Source ]
+             </a>
+          </div>
         </div>
       </div>
     </section>
